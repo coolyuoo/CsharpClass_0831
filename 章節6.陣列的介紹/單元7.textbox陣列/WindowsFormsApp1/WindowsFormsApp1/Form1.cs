@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
             string r = string.Empty;
 
-            foreach (var item in x)
+            foreach (string item in x)
             {
                 r += item + "\r\n";
             }

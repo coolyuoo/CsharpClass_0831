@@ -215,34 +215,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            List<int> x = new List<int>();
-            x.Add(123);
-            x.Add(1456);
-            x.Add(789);
-
-            int z = 0;
-
-            foreach (var item in x)
-            {
-                z += item;
-            }
-
-            MessageBox.Show(z.ToString());
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            List<int> x = new List<int>();
-            x.Add(123);
-            x.Add(1456);
-            x.Add(789);
-
-            int y = x.Sum();
-
-            MessageBox.Show(y.ToString());
-        }
+      
 
         private void button15_Click(object sender, EventArgs e)
         {
@@ -255,10 +228,11 @@ namespace WindowsFormsApp1
             x.Sort();
 
 
-            foreach (var item in x)
-            {
-                MessageBox.Show(item.ToString());
-            }
+            MessageBox.Show(x[0].ToString());
+            MessageBox.Show(x[1].ToString());
+            MessageBox.Show(x[2].ToString());
+            MessageBox.Show(x[3].ToString());
+
 
         }
 
@@ -273,10 +247,10 @@ namespace WindowsFormsApp1
             x.Sort((a, b) => b.CompareTo(a));
 
 
-            foreach (var item in x)
-            {
-                MessageBox.Show(item.ToString());
-            }
+            MessageBox.Show(x[0].ToString());
+            MessageBox.Show(x[1].ToString());
+            MessageBox.Show(x[2].ToString());
+            MessageBox.Show(x[3].ToString());
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -302,7 +276,7 @@ namespace WindowsFormsApp1
             x.Add(new DateTime(2025, 1, 1));
 
 
-            var c = x.OrderByDescending(o => o).ToList();
+            List<DateTime> c = x.OrderByDescending(o => o).ToList();
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -314,7 +288,7 @@ namespace WindowsFormsApp1
             x.Add(new DateTime(2025, 1, 1));
 
 
-            var c = x.OrderBy(o => o).ToList();
+            List<DateTime> c = x.OrderBy(o => o).ToList();
         }
     }
 }

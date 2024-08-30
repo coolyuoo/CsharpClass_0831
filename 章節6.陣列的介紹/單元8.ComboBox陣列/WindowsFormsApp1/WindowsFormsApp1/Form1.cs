@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             x.Add("789");
             x.Add("AAA");
 
-            foreach (var item in x)
+            foreach (string item in x)
             {
                 comboBox1.Items.Add(item);
             }

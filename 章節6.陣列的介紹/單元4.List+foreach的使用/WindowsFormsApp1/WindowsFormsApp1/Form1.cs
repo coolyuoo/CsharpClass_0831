@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -30,6 +31,8 @@ namespace WindowsFormsApp1
 
         }
 
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             List<string> x = new List<string>();
@@ -39,7 +42,7 @@ namespace WindowsFormsApp1
             x.Add("789");
             x.Add("AAA");
 
-            foreach (var item in x)
+            foreach (string item in x)
             {
                 MessageBox.Show(item);
             }
@@ -60,10 +63,39 @@ namespace WindowsFormsApp1
 
             x.Reverse();
 
-            foreach (var item in x)
+            foreach (string item in x)
             {
                 MessageBox.Show(item);
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            List<int> x = new List<int>();
+            x.Add(123);
+            x.Add(1456);
+            x.Add(789);
+
+            int z = 0;
+
+            foreach (int item in x)
+            {
+                z += item;
+            }
+
+            MessageBox.Show(z.ToString());
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            List<int> x = new List<int>();
+            x.Add(123);
+            x.Add(1456);
+            x.Add(789);
+
+            int y = x.Sum();
+
+            MessageBox.Show(y.ToString());
         }
     }
 }
